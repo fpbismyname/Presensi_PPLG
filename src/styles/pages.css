@@ -8,12 +8,14 @@
     --white: #e3e3e3;
     --black: #000000;
     --lightblue: #4486EA;
-    --selectedblue: #4374BE;
+    --selectedblue: rgba(67, 116, 190, 1);
     --darkblue: #10428C;
     /* responsive view pixel*/
     --res30px: calc(1vh + 30px); 
+    --res20px: calc(1vh + 20px); 
     --res10px: calc(1vh + 10px); 
-    --res5px: calc(1vh + 5px); 
+    --res5px: calc(1vh + 5px);
+    --res0px: 0px;
     /* responsive view point*/
     --res12pt: calc(1vh + 12pt); 
     --res24pt: calc(1vh + 24pt);
@@ -23,6 +25,10 @@
     --ease-in: 0.1s ease-in;
     --ease-out: 0.1s ease-out;
     --ease-in-out: 0.1s ease-in-out;
+    /* font weight (font bold) */
+    --regular: 200;
+    --medium: 600;
+    --bold: 900;
 }
 
 /*Login Page Stylesheet*/
@@ -106,6 +112,48 @@
 #login:hover{
     background-color: var(--darkblue);
     color: var(--white);
+}
+
+/* Navbar */
+.Navbar{
+    display: flex;
+    flex-direction: row;
+    background-color: var(--lightblue);
+    color: var(--white);
+    font-weight: var(--bold);
+    font-family: Inter;
+    border-radius: var(--res30px);
+    justify-content: space-between;
+}
+
+.Navbar, ul{
+    display: flex;
+    margin: var(--res0px);
+    /* background-color: blue; */
+}
+
+.Navbar, ul, li{
+    position: flex;
+    list-style: none;
+    gap: var(--res10px);
+    /* background-color: red; */
+}
+
+li {
+    background-color: rgba(67, 116, 190, 0);
+    display: block;
+    border-radius: var(--res30px);
+    padding: var(--res10px);
+}
+
+li:hover {
+    background-color: var(--selectedblue);
+}
+
+.Nav_Brand{
+    display: flex;
+    flex-direction: row;
+    margin: var(--res10px);
 }
 
 
