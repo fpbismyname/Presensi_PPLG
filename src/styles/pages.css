@@ -4,21 +4,28 @@
 
 /* Variable style */
 :root{
+    /* color pallete */
     --white: #e3e3e3;
+    --black: #000000;
     --lightblue: #4486EA;
     --selectedblue: #4374BE;
     --darkblue: #10428C;
+    /* responsive view pixel*/
     --res30px: calc(1vh + 30px); 
     --res10px: calc(1vh + 10px); 
+    --res5px: calc(1vh + 5px); 
+    /* responsive view point*/
     --res12pt: calc(1vh + 12pt); 
-    --res24pt: calc(1vh + 24pt); 
+    --res24pt: calc(1vh + 24pt);
+    --res32pt: calc(1vh + 32pt);
+    /* animation rules  */
     --linear: 0.1s linear;
     --ease-in: 0.1s ease-in;
     --ease-out: 0.1s ease-out;
     --ease-in-out: 0.1s ease-in-out;
 }
 
-/* mainpage */
+/*Login Page Stylesheet*/
 :root{
     margin: 0px;
     padding: 0px;
@@ -52,18 +59,18 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: calc(1vh + 10px);
+    gap: var(--res10px);
 }
 
 .titleLogin{
     font-size: calc(1vw + 24pt);
     line-height: 10px;
-    margin: var(--res30px);
+    margin: calc(var(--res30px) + 24px);
 }
 
 #User{
     background-color: var(--white);
-    padding: var(--res10px);
+    padding: var(--res10px) var(--res30px);
     transition: outline var(--ease-in-out);
     border: none;
     border-radius: var(--res30px);
@@ -75,7 +82,7 @@
 
 #Pass{
     background-color: var(--white);
-    padding: var(--res10px);
+    padding: var(--res10px) var(--res30px);
     transition: outline var(--ease-in-out);
     border: none;
     border-radius: var(--res30px);
@@ -86,11 +93,20 @@
 }
 
 #login{
-    background-color: var(--darkblue);
+    background-color: var(--white);
     border: none;
     border-radius: var(--res30px);
-    padding: var(--res10px);
-    color: var(--white);
+    padding: var(--res5px) var(--res10px);
+    color: var(--black);
+    transition: color var(--ease-in-out), background var(--ease-in-out);
     font-weight: 700;
     width: max-content;
 }
+
+#login:hover{
+    background-color: var(--darkblue);
+    color: var(--white);
+}
+
+
+/* Dashboard Page Stylesheet */
