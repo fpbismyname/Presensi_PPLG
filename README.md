@@ -1,3 +1,3 @@
 # Presensi PPLG
 
-# None of your business
+None of your business, Just Presention Website, LOL :)
