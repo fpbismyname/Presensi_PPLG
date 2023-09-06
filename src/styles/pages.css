@@ -1,0 +1,53 @@
+/* import font */
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap'); /*Lato*/
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Lato&display=swap');/*Inter*/
+
+/* Variable style */
+:root{
+    --white: #e3e3e3;
+    --lightblue: #4486EA;
+    --selectedblue: #4374BE;
+    --darkblue: #10428C;
+    --def30px: calc(1vh + 30px); 
+}
+
+/* mainpage */
+:root{
+    margin: 0px;
+    padding: 0px;
+    background-color:rgb(255, 255, 255);
+    font-family: Inter;
+}
+
+/* Card Login Style */
+.Card{
+    height: max-content;
+    width: max-content;
+    background-color: var(--lightblue);
+    border-radius: var(--def30px);
+    padding: var(--def30px);
+    word-wrap: break-word;
+    position: absolute;
+    transform: translate(-50%, 50%);
+    color: var(--white);
+    left: 50%;
+    bottom: 50%;
+}
+
+.InnerCard{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.Forms{
+    display: flex;
+    flex-direction: column;
+    gap: calc(1vh + 10px);
+}
+
+.titleLogin{
+    font-size: calc(1vw + 24pt);
+    line-height: 10px;
+}
