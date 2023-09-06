@@ -6,7 +6,7 @@ const LoginPage = () => {
   return(
         <div className="Card">
             <div className="InnerCard">
-            <h1 className="title">PPLG</h1>
+            <h1 className="titleLogin">PPLG</h1>
             <form onSubmit={null} className="Forms">
                 <input placeholder="Username" type="text" id="User"/>
                 <input placeholder="Password" type="password" id="Pass"/>
