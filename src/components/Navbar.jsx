@@ -4,7 +4,7 @@ import '../styles/pages.css';
 const Navbar = () =>{
         return(
             <div className='Navbar'>
-                <label className='Nav_Brand'>PPLG</label>
+                <h1 className='Nav_Brand'>PPLG</h1>
                 <ul>
                     <li>Beranda</li>
                     <li>Daftar Absensi</li>

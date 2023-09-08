@@ -155,6 +155,7 @@ li {
     cursor: pointer;
     transition: background-color var(--ease-in-out);
     padding: var(--res10px);
+    cursor: pointer;
 }
 
 li:hover {
@@ -164,6 +165,8 @@ li:hover {
 .Nav_Brand{
     display: flex;
     flex-direction: row;
+    font-size: var(--res8pt);
+    font-weight: var(--bold);
     margin: var(--res10px);
 }
 
