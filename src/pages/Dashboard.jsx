@@ -1,18 +1,24 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import '../styles/pages.css';
 import Navbar from '../components/Navbar';
+import { Navigate } from 'react-router-dom';
 
-class Dashboard extends React.Component{
+const Dashboard = () =>{
+    const [Log, setLog] = useState(null);
+    useEffect(()=>{
+        const Logged_User = localStorage.getItem("Log");
+        if (Logged_User){
+            setLog(Logged_User);
+        }
+    },[]);
 
-    constructor(props){
-        super(props);
-    }
-
-    render(){
+    if (!Log){
+        return <Navigate to="/"/>;
+    } else {
         return(
             <Navbar/>
         )
+    }   
     }
-}
 
 export default Dashboard;

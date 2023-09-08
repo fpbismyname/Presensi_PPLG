@@ -1,40 +1,66 @@
-import React from "react";
-import '../styles/pages.css';
+import React, { useEffect, useState } from "react";
+import "../styles/pages.css";
+import { useNavigate } from "react-router-dom";
 
-class LoginPage extends React.Component {
+const LoginPage = () => {
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+  const users = [
+    {
+      username: "Admin",
+      password: "admin123",
+    },
+  ];
+  const navigate = useNavigate();
+  const [Log, setLog] = useState(
+    localStorage.getItem(localStorage.getItem("Log") || false)
+  );
+  const [empty, setEmpty] = useState("");
+  // useEffect(()=>{
+  //     console.clear()
+  //     console.log("nama :"+username+"| Password :"+password)
+  // })
 
-
-    constructor(props) {
-        super(props);
-        this.handleSubmit = this.handleSubmit.bind(this);
+  useEffect(() => {
+    if (username === "" || password === "") {
+      setEmpty("Username / Password tidak boleh dikosongkan !");
+    } else {
+        setEmpty("");
     }
+  },[username][password]);
 
-    handleSubmit(event) {
-        const user = document.getElementById("User");
-        const pass = document.getElementById("Pass");
-
-        if (user.value == "Admin" && pass.value == "admin123")
-        {
-            alert("Login Succes");
-        } else {
-            alert("Login Failed");
-        }
+  const handleSubmit = (e) => {
+    if (username === users[0].username && password === users[0].password) {
+      localStorage.setItem("Log", true);
+      navigate("/beranda");
+    } else {
+      localStorage.setItem("Log", false);
+      navigate("/");
     }
-
-    render() {
-        return (
-            <div className="Card">
-                <div className="InnerCard">
-                    <h1 className="titleLogin">PPLG</h1>
-                    <form onSubmit={this.handleSubmit} className="Forms">
-                        <input placeholder="Username" type="text" id="User" />
-                        <input placeholder="Password" type="password" id="Pass" />
-                        <input type="submit" value="Login" id="login" />
-                    </form>
-                </div>
-            </div>
-        )
-    }
-}
+  };
+  return (
+    <div className="Card">
+      <div className="InnerCard">
+        <h1 className="titleLogin">PPLG</h1>
+        <p className="FormAlert">{empty}</p>
+        <form onSubmit={handleSubmit} className="Forms">
+          <input
+            placeholder="Username"
+            type="text"
+            id="User"
+            onChange={(e) => setUsername(e.target.value)}
+          />
+          <input
+            placeholder="Password"
+            type="text"
+            id="Pass"
+            onChange={(e) => setPassword(e.target.value)}
+          />
+          <input type="submit" value="Login" id="login" />
+        </form>
+      </div>
+    </div>
+  );
+};
 
 export default LoginPage;

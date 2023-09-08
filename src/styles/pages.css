@@ -11,12 +11,14 @@
     --selectedblue: rgba(67, 116, 190, 1);
     --darkblue: #10428C;
     /* responsive view pixel*/
+    --res300px: calc(1vh + 300px); 
     --res30px: calc(1vh + 30px); 
     --res20px: calc(1vh + 20px); 
     --res10px: calc(1vh + 10px); 
     --res5px: calc(1vh + 5px);
     --res0px: 0px;
     /* responsive view point*/
+    --res8pt: calc(1vh + 8pt); 
     --res12pt: calc(1vh + 12pt); 
     --res24pt: calc(1vh + 24pt);
     --res32pt: calc(1vh + 32pt);
@@ -37,12 +39,13 @@
     padding: 0px;
     background-color:rgb(179, 187, 255);
     font-family: Inter;
+    -webkit-tap-highlight-color: transparent;
 }
 
 /* Card Login Style */
 .Card{
     height: max-content;
-    width: max-content;
+    width: var(--res300px);
     background-color: var(--lightblue);
     border-radius: var(--res30px);
     padding: var(--res30px);
@@ -52,6 +55,12 @@
     color: var(--white);
     left: 50%;
     bottom: 50%;
+}
+
+.FormAlert{
+    text-align: center;
+    font-size: var(--res8px);
+    color: rgb(255, 230, 0);
 }
 
 .InnerCard{
@@ -71,7 +80,7 @@
 .titleLogin{
     font-size: calc(1vw + 24pt);
     line-height: 10px;
-    margin: calc(var(--res30px) + 24px);
+    margin: calc(var(--res10px) + 24px);
 }
 
 #User{
@@ -135,7 +144,7 @@
 .Navbar, ul, li{
     position: flex;
     list-style: none;
-    gap: var(--res10px);
+    /* gap: var(--res10px); */
     /* background-color: red; */
 }
 
@@ -143,6 +152,8 @@ li {
     background-color: rgba(67, 116, 190, 0);
     display: block;
     border-radius: var(--res30px);
+    cursor: pointer;
+    transition: background-color var(--ease-in-out);
     padding: var(--res10px);
 }
 

@@ -1,13 +1,7 @@
 import React from 'react';
 import '../styles/pages.css';
 
-class Navbar extends React.Component{
-
-    constructor(props){
-        super(props);
-    }
-
-    render(){
+const Navbar = () =>{
         return(
             <div className='Navbar'>
                 <label className='Nav_Brand'>PPLG</label>
@@ -19,6 +13,5 @@ class Navbar extends React.Component{
             </div>
         )
     }
-}
 
 export default Navbar;
