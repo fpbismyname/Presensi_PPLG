@@ -17,6 +17,7 @@
     --res5px: calc(1vh + 5px);
     --res0px: 0px;
     /* responsive view point*/
+    --res8pt: calc(1vh + 8pt); 
     --res12pt: calc(1vh + 12pt); 
     --res24pt: calc(1vh + 24pt);
     --res32pt: calc(1vh + 32pt);
@@ -135,7 +136,7 @@
 .Navbar, ul, li{
     position: flex;
     list-style: none;
-    gap: var(--res10px);
+    /* gap: var(--res10px); */
     /* background-color: red; */
 }
 
@@ -144,6 +145,7 @@ li {
     display: block;
     border-radius: var(--res30px);
     padding: var(--res10px);
+    cursor: pointer;
 }
 
 li:hover {
@@ -153,6 +155,8 @@ li:hover {
 .Nav_Brand{
     display: flex;
     flex-direction: row;
+    font-size: var(--res8pt);
+    font-weight: var(--bold);
     margin: var(--res10px);
 }
 
