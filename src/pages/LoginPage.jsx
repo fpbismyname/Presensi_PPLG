@@ -3,6 +3,7 @@ import "../styles/pages.css";
 import { useNavigate } from "react-router-dom";
 
 const LoginPage = () => {
+  //Login System
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const users = [
@@ -11,31 +12,37 @@ const LoginPage = () => {
       password: "admin123",
     },
   ];
-  const navigate = useNavigate();
-  const [Log, setLog] = useState(
-    localStorage.getItem(localStorage.getItem("Log") || false)
-  );
-  const [empty, setEmpty] = useState("");
-  // useEffect(()=>{
-  //     console.clear()
-  //     console.log("nama :"+username+"| Password :"+password)
-  // })
 
+  //Navigate system
+  const navigate = useNavigate();
+
+  //Form Empty Exception
+  const [empty, setEmpty] = useState("");
+
+  //Safe Login Account
+  const [Log, setLog] = useState(false);
+
+  // Debug Variable
   useEffect(() => {
-    if (username === "" || password === "") {
-      setEmpty("Username / Password tidak boleh dikosongkan !");
-    } else {
-        setEmpty("");
-    }
-  },[username][password]);
+    console.clear();
+    console.log("nama :" + username + "| Password :" + password);
+    console.log(Log);
+  });
+  
+  useEffect(() => {
+    console.clear();
+    console.log("nama :" + username + "| Password :" + password);
+    console.log(Log);
+  });
 
   const handleSubmit = (e) => {
+    e.preventDefault();
     if (username === users[0].username && password === users[0].password) {
-      localStorage.setItem("Log", true);
-      navigate("/beranda");
+      setLog(true);
+      navigate('/beranda')
     } else {
-      localStorage.setItem("Log", false);
-      navigate("/");
+      setLog(false);
+      navigate('/')
     }
   };
   return (
