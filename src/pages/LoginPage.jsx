@@ -17,7 +17,7 @@ const LoginPage = () => {
   const navigate = useNavigate();
 
   //Form Empty Exception
-  // const [empty, setEmpty] = useState("");
+  const [empty, setEmpty] = useState();
 
   //Safe Login Account
   const [Log, setLog] = useState(localStorage.getItem("Log", null));
@@ -45,6 +45,7 @@ const LoginPage = () => {
       localStorage.setItem("Log", true);
       setLog(localStorage.getItem("Log"));
     } else {
+      setEmpty("Username / Password tidak tepat !")
       localStorage.setItem("Log", false);
       setLog(localStorage.getItem("Log"));
       // navigate('/')
@@ -64,7 +65,7 @@ const LoginPage = () => {
     <div className="Card">
       <div className="InnerCard">
         <h1 className="titleLogin">PPLG</h1>
-        {/* <p className="FormAlert">{empty}</p> */}
+        <p className="FormAlert">{empty}</p>
         <form onSubmit={handleSubmit} className="Forms">
           <input
             placeholder="Username"
