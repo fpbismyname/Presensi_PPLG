@@ -172,3 +172,30 @@ li:hover {
 
 
 /* Dashboard Page Stylesheet */
+.DashboardMain{
+    display: flex;
+    gap: var(--res10px);
+    flex-direction: column;
+}
+.innerDashboard{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.PPLG_Text{
+    font-family: Lato;
+    background-color: var(--lightblue);
+    padding: var(--res30px);
+    color: var(--white);
+    width: var(--res300px);
+    height: max-content;
+    border-radius: var(--res30px);
+}
+.description_Dashboard{
+    font-size: var(--res8pt);
+    width: var(--res300px);
+}
+.title_Dashboard{
+    font-size: var(--res24pt);
+}

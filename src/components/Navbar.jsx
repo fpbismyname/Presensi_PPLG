@@ -6,11 +6,13 @@ const Navbar = () => {
   const [logUser, setLogUser] = useState(localStorage.getItem("Log"));
 
   const navigate = useNavigate();
+
   const Logout = () => {
     localStorage.setItem("Log", false);
     setLogUser(localStorage.getItem("Log"));
   };
 
+  //Check
   useEffect(() => {
     if (logUser === "true") {
       navigate("/beranda");
