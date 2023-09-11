@@ -25,7 +25,7 @@ const Navbar = () => {
     <div className="Navbar">
       <h1 className="Nav_Brand">PPLG</h1>
       <ul>
-        <li>Beranda</li>
+        <li onClick={()=>{navigate('/beranda')}}>Beranda</li>
         <li>Daftar Absensi</li>
         <li>Kontak</li>
         <li onClick={Logout}>Logout</li>

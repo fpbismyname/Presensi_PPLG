@@ -11,6 +11,7 @@
     --selectedblue: rgba(67, 116, 190, 1);
     --darkblue: #10428C;
     /* responsive view pixel*/
+    --res500px: calc(1vh + 500px); 
     --res300px: calc(1vh + 300px); 
     --res30px: calc(1vh + 30px); 
     --res20px: calc(1vh + 20px); 
@@ -174,7 +175,7 @@ li:hover {
 /* Dashboard Page Stylesheet */
 .DashboardMain{
     display: flex;
-    gap: var(--res10px);
+    gap: var(--res30px);
     flex-direction: column;
 }
 .innerDashboard{
@@ -188,13 +189,17 @@ li:hover {
     background-color: var(--lightblue);
     padding: var(--res30px);
     color: var(--white);
-    width: var(--res300px);
+    width: var(--res500px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     height: max-content;
     border-radius: var(--res30px);
+    line-height: var(--res24pt);
 }
 .description_Dashboard{
     font-size: var(--res8pt);
-    width: var(--res300px);
 }
 .title_Dashboard{
     font-size: var(--res24pt);
