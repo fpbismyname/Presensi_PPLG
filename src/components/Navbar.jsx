@@ -14,9 +14,7 @@ const Navbar = () => {
 
   //Check
   useEffect(() => {
-    if (logUser === "true") {
-      navigate("/beranda");
-    } else if (logUser === "false") {
+    if (logUser === "false") {
       navigate("/");
     }
   }, [logUser]);
@@ -26,7 +24,7 @@ const Navbar = () => {
       <h1 className="Nav_Brand">PPLG</h1>
       <ul>
         <li onClick={()=>{navigate('/beranda')}}>Beranda</li>
-        <li>Daftar Absensi</li>
+        <li onClick={()=>{navigate('/daftarabsensi')}}>Daftar Absensi</li>
         <li>Kontak</li>
         <li onClick={Logout}>Logout</li>
       </ul>
