@@ -1,23 +1,25 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import {db} from "../firebase-config"
+import { onValue, ref } from "firebase/database";
 
 const Daftar_Kelas = () => {
-  const kontol = () => {
-    let leng = 10;
-    while (leng > 0) {
-        return(
-            <tr>
-                <td>Kontol</td>
-            </tr>
-        )
-    }
-  };
+  const Kelas = () => {
+
+    return (
+      <>
+        <tr>;
+          <td>Kumalala</td>
+        </tr>
+      </>
+    )
+  }
   return (
     <div className="Dftr_Absns">
       <table border="1">
         <tr>
           <th>Daftar Kelas</th>
         </tr>
-        {kontol()}
+        {Kelas()}
       </table>
     </div>
   );

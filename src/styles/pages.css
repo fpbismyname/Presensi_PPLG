@@ -1,4 +1,3 @@
-/* import font */
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap'); /*Lato*/
 @import url('https://fonts.googleapis.com/css2?family=Inter&family=Lato&display=swap');/*Inter*/
 
@@ -203,4 +202,12 @@ li:hover {
 }
 .title_Dashboard{
     font-size: var(--res24pt);
+}
+
+/* Daftar Kelas */
+.Dftr_Absns{
+    position: absolute;
+    transform: translate(-50%, 50%);
+    left: 50%;
+    bottom: 50%;
 }

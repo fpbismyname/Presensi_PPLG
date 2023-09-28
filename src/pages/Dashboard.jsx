@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import "../styles/pages.css";
-import Navbar from "../components/Navbar";
+// import "../styles/pages.css";
+import Navbars from "../components/Navbars";
 import "../pages/LoginPage";
 import { Navigate } from "react-router-dom";
 import Dashboard_1 from '../components/Dashboard_1';
@@ -18,7 +18,7 @@ const Dashboard = () => {
   if (logUser === "true") {
     return (
       <div className="DashboardMain">
-        <Navbar />
+        <Navbars/>
         <div className="innerDashboard">
           {/* <button onClick={Logout}>Logout</button> */}
           <Dashboard_1 />

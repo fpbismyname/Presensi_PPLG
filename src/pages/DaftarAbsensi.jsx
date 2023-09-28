@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from "react";
-import "../styles/pages.css";
+// import "../styles/pages.css";
 import DaftarKelas from "../components/DaftarKelas";
-import Navbar from "../components/Navbar";
+import Navbars from "../components/Navbars";
 import { Navigate } from "react-router-dom";
 
 const Daftar_Absensi = () => {
@@ -17,7 +17,7 @@ const Daftar_Absensi = () => {
     return (
       <>
         <div className="DaftarAbsensi">
-          <Navbar />
+          <Navbars/>
           <DaftarKelas />
         </div>
       </>
