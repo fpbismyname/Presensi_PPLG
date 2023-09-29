@@ -1,15 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap'); /*Lato*/
-@import url('https://fonts.googleapis.com/css2?family=Inter&family=Lato&display=swap');/*Inter*/
-
-:root{
-    /* color pallete */
-    --white: #e3e3e3;
-    --black: #000000;
-    --lightblue: #4486EA;
-    --selectedblue: rgba(67, 116, 190, 1);
-    --darkblue: #10428C;
-}
-
+@import url(../styles/GlobalVar.css);
 /* Navbar Style */
 .navbar, .navbar-default{
     background-color: var(--lightblue);
@@ -20,6 +9,7 @@
 .navbar-brand, .nav-link{
     font-weight: 900;
     cursor: pointer;
+    transition: color 0.2s;
     margin: 0rem 1.5rem;
     color: var(--white);
 }

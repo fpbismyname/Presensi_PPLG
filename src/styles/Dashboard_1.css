@@ -1,0 +1,19 @@
+@import url('../styles/GlobalVar.css');
+
+.D1 .card{
+    width: var(--XL);
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--lightblue);
+    padding: var(--S);
+    gap: var(--S);
+}
+.D1 .card-img{
+    width: var(--M);
+}
+.D1 .container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

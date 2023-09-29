@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap'); /*Lato*/
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Lato&display=swap');/*Inter*/
+
+:root{
+    /* color pallete */
+    --white: #e3e3e3;
+    --black: #000000;
+    --lightblue: #4486EA;
+    --selectedblue: rgba(67, 116, 190, 1);
+    --darkblue: #10428C;
+    /* Size Rem*/
+    --S: 2rem; 
+    --S1: 4rem; 
+    --M: 12rem;
+    --L: 24rem;
+    --XL: 32rem;
+}
